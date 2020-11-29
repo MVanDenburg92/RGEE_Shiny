@@ -7,5 +7,5 @@
     3. Point of peak value (POP)
     4. Length of season(LOS)
     
-# Dashboard Application 
+### Dashboard Application 
 ![Dashboard](metrics.PNG)
