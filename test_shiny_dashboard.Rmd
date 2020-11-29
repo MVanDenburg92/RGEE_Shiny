@@ -1,0 +1,151 @@
+---
+title: "shiny_app_test"
+author: "Shreena Pyakurel"
+date: "11/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(geospaar)
+#install.packages("greenbrown", repos="http://R-Forge.R-project.org")
+library(greenbrown)
+worc_EVI <- read.csv("../inst/extdata/worc_evi.csv")
+worc_EVI %>% as.data.frame()
+#create raster
+e <- extent(worc_EVI[,(1:2)])
+r <- raster(e, ncol=16, nrow=18, crs= "+proj=longlat +datum=WGS84")
+evi_years<- rasterize(worc_EVI[,1:2], r, worc_EVI[,3:length(worc_EVI)], fun=mean)
+plot(evi_years)
+#phenology
+all_pixels <- worc_EVI %>%
+  select (-c(x, y)) %>%
+  arrange() %>%
+  slice(1:nrow(worc_EVI)) %>%
+  t()
+#time series
+EVIseries <- ts(all_pixels, start=c(2000, 1), end=c(2007, 12), frequency=12)
+#interpolate
+#Create empty lists for lapply
+Yt_interpolate_daily <- list()
+Yt_interpolate_daily2 <- list()
+Phen_2000_2007 <- list()
+#Apply Tspp # time series pre-processing ---interpolating across whole data set.  Use lapply to retain time series information.
+# ww <- ncol(EVIseries)
+# Yt_interpolate_daily2 <- lapply(seq(ww), function(x){
+#   Yt_interpolate_daily[[x]]  <- TsPP(EVIseries[,x], fpg = FillPermanentGaps, tsgf=TSGFspline)
+# })
+###############################################
+library(doParallel)  #Foreach Parallel Adaptor
+library(foreach)
+library(parallel)
+model.mse <- function(x){
+  Yt_interpolate_daily[[x]]  <- greenbrown::TsPP(EVIseries[,x], fpg = FillPermanentGaps, tsgf=TSGFspline)
+}
+UseCores <- detectCores() - 1
+ww <- ncol(EVIseries)
+system.time({
+  clust <- makeCluster(UseCores)
+  clusterEvalQ(clust, library("greenbrown"))
+  clusterExport(clust, c("EVIseries","Yt_interpolate_daily"))
+  Yt_interpolate_daily2 <- parLapply(clust, seq(ww), model.mse)})
+model_phen <- function(x){
+  Phen_2000_2007[[x]] <- Phenology(Yt_interpolate_daily2[[x]], approach="White")
+}
+system.time({
+  # clust <- makeCluster(UseCores)
+  clusterEvalQ(clust, library("greenbrown"))
+  clusterExport(clust, c('Phen_2000_2007', 'Yt_interpolate_daily2'))
+  Phen_2000_2007 <- parLapply(clust, seq(ww), model_phen)})
+##########################################################
+plot(Yt_interpolate_daily2[[1]] )
+years <- c(2000:2007)
+years <- as.numeric(years)
+#can take a bit of time ~2-3  minutes need to reduce
+# Phen_2000_2007 <- list()
+# for(i in seq(ww)){
+#   Phen_2000_2007[[i]] <- Phenology(Yt_interpolate_daily2[[i]], approach="White")
+# }
+plot(Phen_2000_2007[[1]])
+sos <- list()
+eos <- list()
+los <- list()
+pop <- list()
+for(i in seq(ncol(EVIseries))){
+  sos[[i]] <-  as.numeric( Phen_2000_2007[[i]][["sos"]])
+  eos[[i]] <-  as.numeric( Phen_2000_2007[[i]][["eos"]])
+  los[[i]] <-  as.numeric( Phen_2000_2007[[i]][["los"]])
+  pop[[i]] <-  as.numeric( Phen_2000_2007[[i]][["pop"]])
+}
+sos <- unlist(sos)
+eos <- unlist(eos)
+los <- unlist(los)
+pop <- unlist(pop)
+coords <-worc_EVI %>% select(x, y)
+coords2 <- coords %>% slice(rep(1:n(), each = 8))
+DF_phenmet_test <- data.frame(coords2,sos, eos, los, pop) %>% cbind(years)
+DF_phenmet_testarranged <- DF_phenmet_test %>% arrange(years)
+DF_phenmet_testarranged_sf = st_as_sf(DF_phenmet_testarranged, coords = c("x", "y"), crs = 4326)
+e <- extent(worc_EVI[,(1:2)])
+r <- raster(e, ncol = 16, nrow = 18, crs= '+proj=longlat +datum=WGS84')
+raster_brick <- do.call(stack, lapply(unique(DF_phenmet_testarranged$years), function(yr){
+  years_sub <- DF_phenmet_testarranged %>% filter(years == yr)
+  rst <- rasterize(years_sub[, 1:2], r, years_sub[, c(3:(ncol(years_sub) - 1))], fun = mean)
+  names(rst) <- paste(names(rst), yr, sep = '_')
+  rst
+}))
+# if statement choose plot for correct EVI and NDVI
+plot(raster_brick)
+    
+```
+
+
+```{r}
+library(shiny)
+library(shinydashboard)
+library(geospaar)
+years <- c(2000:2007)
+header <- dashboardHeader(
+  title = 'Phenology Metrics')
+sidebar <- dashboardSidebar(
+  menuItem("Years", tabName = "select Year",
+           selectInput("start_date", "Start Date:", years),
+           selectInput("end_date", "End Date:", years)))
+body <- dashboardBody(
+  fluidRow(
+    box(div(style='width:500px;overflow-x: scroll; height:500px;overflow-y: scroll;',
+            plotOutput("pt", height = 500, width = 500))), 
+  box(div(style='width:500px;overflow-x: scroll; height:500px;overflow-y: scroll;',
+            plotOutput("regression", height = 500, width = 500)))))
+ui <- dashboardPage(
+  header,
+  sidebar,
+  body)
+server <- function(input, output) {
+  output$pt <- renderPlot({
+    years1 <- DF_phenmet_testarranged %>%
+      filter(years >= input$start_date &
+               years <= input$end_date)
+    
+    
+    e <- extent(worc_EVI[,(1:2)])
+    r <- raster(e, ncol = 16, nrow = 18, crs= '+proj=longlat +datum=WGS84')
+    raster_brick <- do.call(stack, lapply(unique(years1$years), function(yr){
+      years_sub <- years1 %>% filter(years == yr)
+      rst <- rasterize(years_sub[, 1:2], r, years_sub[, c(3:(ncol(years_sub) - 1))], fun = mean)
+      names(rst) <- paste(names(rst), yr, sep = '_')
+      rst
+    }))
+    # if statement choose plot for correct EVI and NDVI
+    plot(raster_brick)
+  })
+  output$regression <- renderPlot({
+  plot(Phen_2000_2007[[1]])
+  })
+}
+shinyApp(ui, server)
+```
