@@ -7,16 +7,17 @@
 #    http://shiny.rstudio.com/
 #
 
+## remotes::install_github("rforge/greenbrown/pkg/greenbrown/", force = TRUE)
 
-# install.packages('rsconnect')
 
-# library(rsconnect)
+# pkgload::load_all(path= "folder-with-pkg-code")
+
+# using("shiny","ggplot2","sf","sp", "tidyverse", "raster", "qdapRegex", "lubridate", "doParallel", "foreach","parallel", "gsubfn","rgee", "reticulate", "rgdal", "magrittr", "kimisc")
+
+# remotes::install_github("r-spatial/rgee", dependencies = TRUE)
+
 # 
-# rsconnect::setAccountInfo(name='mvandenburg',
-#                        token='24001D7BE77FFA23CAC981450335BA66',
-#                            secret='RT9HD65XOnmzzD/0Z2smr/8lT9MTg+dCI5C3QU/T')
 library(rsconnect)
-# rsconnect::deployApp("C:/Users/mvand/Documents/R_Projects/GEE_EBV_EVI/EBV_GEE/")
 # install.packages("slickR")
 library(slickR)
 library(shiny)
