@@ -111,7 +111,11 @@ ee_clean_pyenv() # Remove reticulate system variables
 ### GreenBrown
 
 #Insert Image Here
-
+```r
+#Install greenbrown
+install.packages("greenbrown", repos="http://R-Forge.R-project.org")
+library(greenbrown)
+```
 
 ## Product Updates 
 
