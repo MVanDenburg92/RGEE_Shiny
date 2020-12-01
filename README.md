@@ -77,15 +77,6 @@ remotes::install_github("r-spatial/rgee")
 sudo pip3 install virtualenv
 ```
 
-#### Docker image
-    
-    docker pull csaybar/rgee
-    docker run -d -p 8787:8787 -e USER=rgee -e PASSWORD=rgee --name rgee-dev csaybar/rgee
-
-After that, in your preferred browser, run:
-
-    127.0.0.1:8787
-
 ## setup
 
 Prior to using `rgee` you will need to install a **Python version higher than 3.5** in their system. `rgee` counts with an installation function (ee_install) which helps to setup `rgee` correctly:
