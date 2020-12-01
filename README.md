@@ -247,7 +247,7 @@ Following our work from this semester, we are able to extract these metrics for 
 
     
 ### Dashboard Application 
-![Dashboard](metrics.PNG)
+![Dashboard](metrics2.PNG)
 
 
 ### Shiny App Application 
