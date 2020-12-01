@@ -239,7 +239,7 @@ https://www.youtube.com/watch?v=RNs3XpRmRfI
 [contributors-url]: https://github.com/MVanDenburg92/RGEE_Shiny/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
 [forks-url]: https://github.com/MVanDenburg92/RGEE_Shiny/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/MVanDenburg92/RGEE_Shiny?style=for-the-badge
 [stars-url]: https://github.com/MVanDenburg92/RGEE_Shiny/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/MVanDenburg92/RGEE_Shiny/issues
