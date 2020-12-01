@@ -21,7 +21,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-[![LinkedIn2][linkedin-shield2][linkedin-url2]
+[![LinkedIn2][linkedin-shield2]][linkedin-url2]
 
 
 
