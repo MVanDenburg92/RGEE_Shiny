@@ -237,7 +237,7 @@ https://www.youtube.com/watch?v=RNs3XpRmRfI
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
 [contributors-url]: https://github.com/MVanDenburg92/RGEE_Shiny/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/MVanDenburg92/RGEE_Shiny?label=Fork&style=for-the-badge
 [forks-url]: https://github.com/MVanDenburg92/RGEE_Shiny/network/members
 [stars-shield]: https://img.shields.io/github/stars/MVanDenburg92/RGEE_Shiny?style=for-the-badge
 [stars-url]: https://github.com/MVanDenburg92/RGEE_Shiny/stargazers
