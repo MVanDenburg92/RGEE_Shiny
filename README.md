@@ -29,7 +29,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/MVanDenburg92/RGEE_Shiny/blob/main/README.md">
-    <img src="RGEE_Logo.PNG" alt="Logo" width="80" height="80">
+    <img src="RGEE_Logo.PNG" alt="Logo" width="200" height="200">
   </a>
 
   <h1 align="center">Phenology with GEE and R</h1>
