@@ -94,6 +94,53 @@ The winning proposals begin a two-year journey to produce tangible societal bene
     4. Length of season(LOS)
 
 ## Built With
+
+* [RGEE](https://csaybar.github.io/rgee-examples/#What%20is%20rgee%3f)
+* [Greenbrown](http://greenbrown.r-forge.r-project.org/index.php)
+* [R Shiny](https://laravel.com)
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+You need to have an R version of 4.0 or greater and an updated R studio. In addition you will need the following packages: 
+#### Required Packages
+
+```r
+#
+"shiny","ggplot2","sf","sp", "tidyverse", "raster", "qdapRegex", "lubridate", "doParallel", "foreach","parallel", "gsubfn","rgee", "reticulate", "rgdal", "magrittr", "kimisc"
+```
+You cane quickly check for them and install them by using the below function:
+
+```r
+using<-function(...) {
+    libs<-unlist(list(...))
+    req<-unlist(lapply(libs,require,character.only=TRUE))
+    need<-libs[req==FALSE]
+    n<-length(need)
+    if(n>0){
+        libsmsg<-if(n>2) paste(paste(need[1:(n-1)],collapse=", "),",",sep="") else need[1]
+        print(libsmsg)
+        if(n>1){
+            libsmsg<-paste(libsmsg," and ", need[n],sep="")
+        }
+        libsmsg<-paste("The following packages could not be found: ",libsmsg,"\n\r\n\rInstall missing packages?",collapse="")
+        if(winDialog(type = c("yesno"), libsmsg)=="YES"){       
+            install.packages(need)
+            lapply(need,require,character.only=TRUE)
+        }
+    }
+}
+
+using("shiny","ggplot2","sf","sp", "tidyverse", "raster", "qdapRegex", "lubridate", "doParallel", "foreach","parallel", "gsubfn","rgee", "reticulate", "rgdal", "magrittr", "kimisc")
+
+
+```
+  
 ### RGEE
 
 #Insert Image Here
@@ -161,7 +208,7 @@ remotes::install_github("r-spatial/rgee")
 sudo pip3 install virtualenv
 ```
 
-#### setup
+#### Setup
 
 Prior to using `rgee` you will need to install a **Python version higher than 3.5** in their system. `rgee` counts with an installation function (ee_install) which helps to setup `rgee` correctly:
 
@@ -191,13 +238,6 @@ ee_clean_pyenv() # Remove reticulate system variables
 install.packages("greenbrown", repos="http://R-Forge.R-project.org")
 library(greenbrown)
 ```
-
-### Required Packages
-
-```r
-# using("shiny","ggplot2","sf","sp", "tidyverse", "raster", "qdapRegex", "lubridate", "doParallel", "foreach","parallel", "gsubfn","rgee", "reticulate", "rgdal", "magrittr", "kimisc")
-```
-
 
 
 ## Product Updates 
