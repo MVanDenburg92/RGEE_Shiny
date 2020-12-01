@@ -78,8 +78,13 @@
   </ol>
 </details>
 
+## About the Project 
 
-### Objective
+Last year, GEO and Google Earth Engine announced a call to action for Earth observations projects monitoring the pulse of the planet to apply for the GEO-GEE Programme. More than 50 projects were submitted from around the globe on a range of social and environmental topics including climate monitoring, water and coastal observations, sustainable development and other key areas related to environmental protection and conservation. 
+
+The winning proposals begin a two-year journey to produce tangible societal benefits using the power of Earth observations coupled to Google Earth Engine. In partnership with EO Data Science, the winners are receiving in-kind technical support, mentoring and ongoing capacity development to ensure projects achieve their intended impact.
+
+## Objective
 - Phenology is described as the study of timing of different event such as flowering, leafing, and migrations
 - The goal of our project is to develop essential biodiversity variables using Google Earth Engine to extract and analyze phenological metrics to explore trends over  time using two key packages `RGEE` and `GreenBrown`. 
 - The metrics we are extracting follows
@@ -88,11 +93,12 @@
     3. Point of peak value (POP)
     4. Length of season(LOS)
 
+## Built With
 ### RGEE
 
 #Insert Image Here
 
-## What is Google Earth Engine?
+#### What is Google Earth Engine?
 
 [Google Earth Engine](https://earthengine.google.com/) is a cloud-based platform that allows users to have an easy access to a petabyte-scale archive of remote sensing data and run geospatial analysis on Google’s infrastructure. Currently, Google offers support only for Python and JavaScript. `rgee` will fill the gap **starting to provide support to R\!**. Below you will find the comparison between the syntax of `rgee` and the two Google-supported client libraries.
 
@@ -141,7 +147,7 @@ image$bandNames()$getInfo()
 
 **Quite similar, isn’t it?**. However, there are additional smaller changes should consider when using Google Earth Engine with R. Please check the [consideration section](https://r-spatial.github.io/rgee/articles/considerations.html) before you start coding\!
 
-## Installation
+#### Installation
 
 Install the `rgee` package from GitHub is quite simple, you just have to run in your R console as follows:
 
@@ -155,7 +161,7 @@ remotes::install_github("r-spatial/rgee")
 sudo pip3 install virtualenv
 ```
 
-## setup
+#### setup
 
 Prior to using `rgee` you will need to install a **Python version higher than 3.5** in their system. `rgee` counts with an installation function (ee_install) which helps to setup `rgee` correctly:
 
