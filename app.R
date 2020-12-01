@@ -41,7 +41,7 @@ library(rgee)
 
 
 # ee_install()
-ee_Initialize(email = 'miles.vandenburg@gmail.com')
+ee_Initialize(email = 'insert email')
 
 
 
