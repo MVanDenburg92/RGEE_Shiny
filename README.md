@@ -24,13 +24,6 @@
 ### Fall 2020 Product
 Following our work from this semester, we are able to extract these metrics for over 7 years from 2000-2007 using only EVI and one site and visualize it on a shiny app which is hosted online on github for people to download and utilize. 
 
-
-### Spring 2020 End Product: 
-Google Earth Engine App that allows the user to select an input region and extract these metrics based on user input:
-Imagery Collection
-Dates
-Desired Metric
-
     
 ### Dashboard Application 
 ![Dashboard](metrics.PNG)
@@ -38,3 +31,30 @@ Desired Metric
 
 ### Shiny App Application 
 ![Shiny App](shiny_app.PNG)
+
+
+## Future Work
+
+### Spring 2020 End Product: 
+Google Earth Engine App that allows the user to select an input region and extract these metrics based on user input:
+Imagery Collection
+Dates
+Desired Metric
+
+
+### Sources
+
+#### RGEE
+https://csaybar.github.io/rgee-examples/#What%20is%20rgee%3f
+https://github.com/MVanDenburg92/RGEE_Workshop
+
+#### Greenbrown
+http://greenbrown.r-forge.r-project.org/index.php
+
+#### Project Links
+http://earthobservations.org/article.php?id=447
+https://eodatascience.com/About/Company-Overview
+
+#### Phenology
+https://www.youtube.com/watch?v=RNs3XpRmRfI
+
