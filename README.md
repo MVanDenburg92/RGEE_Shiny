@@ -28,14 +28,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/MVanDenburg92/RGEE_Shiny/blob/main/README.md">
     <img src="RGEE_Logo.PNG" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h1 align="center"># Phenology with GEE and R</h1>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Two case examples of Phenological imagery analysis with R and Google Earth Engine
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
