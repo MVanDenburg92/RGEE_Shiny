@@ -68,10 +68,8 @@
     </li>
     <li><a href="#getting-the-apps-to-run">Running the Apps</a></li>
       <ul>
-        <li>
           <li><a href="#shiny-dashboard">Shiny Dashboard</a></li>
           <li><a href="#shiny-app">Shiny App</a></li>
-        </li>
       </ul>
     <li><a href="#future-work">Future Work</a></li>
     <li><a href="#contact-us">Contact</a></li>
