@@ -278,7 +278,7 @@ Dates
 Desired Metric
 
 ## Contact US
-
+<p align="center">
 <img src="images/miles_image.png" width="300" height="300">         .      
                 
 <a href="mailto::mvandenburg@clarku.edu ">Contact Miles</a>                                    
@@ -286,7 +286,7 @@ Desired Metric
  <img src="images/shreener.png" width="300" height="300">
  
 <a href="mailto:: spyakurel@clarku.edu ">Contact Shreena</a>
-
+</p>
 ## Sources
 
 #### RGEE
