@@ -66,11 +66,17 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#getting-the-apps-to-run">Running the Apps</a></li>
+      <ul>
+        <li>
+          <li><a href="#shiny-dashboard">Shiny Dashboard</a></li>
+          <li><a href="#shiny-app">Shiny App</a></li>
+        </li>
+
+      </ul>
+    </li>
     <li><a href="#future-work">Future Work</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact-us">Contact</a></li>
     <li><a href="#acknowledgements">Sources</a></li>
   </ol>
 </details>
@@ -239,6 +245,16 @@ library(greenbrown)
 
 ### Getting the Apps to Run 
 
+
+#### Shiny Dashboard
+
+After copying and opening the script in R Studio, please be sure to replace the csv file name and path within line 18 with the file path to your own EVI dataset stored as a csv. See Below:
+```r
+worc_EVI <- read.csv("../inst/extdata/worc_evi.csv")
+```
+
+#### Shiny App
+
 After you get the prerequisite packages installed followed up by rgee and greenbrown, the next step is to get the app scripts!  Click on the app of interest and Copy the code  into an app.R script files within R studio. 
 
 After you set up your Shiny Web App script, please run the following lines BEFORE running the App to correctly load up both rgee and the reticulate package (allows for python libraries and functions to be used within R). 
@@ -275,7 +291,7 @@ Imagery Collection
 Dates
 Desired Metric
 
-## Contact US
+## Contact Us
 <p align="center">
   <img src="images/miles_image.png" width="300" height="300">   <p align = "center">
 I'm a GIS analyst with a mind for creative innovation and implementation. My interests lie is Urban applications of GIS, with interests in programmatic GIS and leveraging open source GIS technologies for smarter urban planning.   As I head into the final year of my Masters in GIS at Clark University i’m working for Clark Labs as a Remote Sensing Research Assistant as part of the Half-Earth project with ESRI with the goal of modeling land change for each country in the world for the year 2050.
