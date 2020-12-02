@@ -110,7 +110,7 @@ You need to have an R version of 4.0 or greater and an updated R studio. In addi
 
 ```r
 #
-"shiny","ggplot2","sf","sp", "tidyverse", "raster", "qdapRegex", "lubridate", "doParallel", "foreach","parallel", "gsubfn","rgee", "reticulate", "rgdal", "magrittr", "kimisc"
+"shiny","ggplot2","sf","sp", "tidyverse", "raster", "qdapRegex", "lubridate", "doParallel", "foreach","parallel", "gsubfn","rgdal", "magrittr", "kimisc"
 ```
 You cane quickly check for them and install them by using the below function:
 
@@ -134,7 +134,7 @@ using<-function(...) {
     }
 }
 
-using("shiny","ggplot2","sf","sp", "tidyverse", "raster", "qdapRegex", "lubridate", "doParallel", "foreach","parallel", "gsubfn","rgee", "reticulate", "rgdal", "magrittr", "kimisc")
+using("shiny","ggplot2","sf","sp", "tidyverse", "raster", "qdapRegex", "lubridate", "doParallel", "foreach","parallel", "gsubfn","rgdal", "magrittr", "kimisc")
 
 
 ```
@@ -237,6 +237,22 @@ install.packages("greenbrown", repos="http://R-Forge.R-project.org")
 library(greenbrown)
 ```
 
+
+### Getting the Apps to Run 
+
+After you get the prerequisite packages installed followed up by rgee and greenbrown, the next step is to get the app scripts!  Click on the app of interest and Copy the code  into an app.R script files within R studio. 
+
+After you set up your Shiny Web App script, please run the following lines BEFORE running the App to correctly load up both rgee and the reticulate package (allows for python libraries and functions to be used within R). 
+
+```r
+library(rgee)
+ee_Initialize()
+
+#DO NOT RUN library( UNTIL YOU HAVE INTIALIZED GEE|  If you do, your system will brick because you need to define the python environment using rgee first.
+library(reticulate)
+```
+
+Once you have these packages loaded up post-installation and initiallization, you are ready to run the app! Leave the code exactly how it is and click "Run App"!
 
 ## Product Updates 
 
