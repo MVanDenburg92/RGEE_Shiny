@@ -36,6 +36,7 @@
 
   <p align="center">
     Two case examples of Phenological imagery analysis with R and Google Earth Engine
+  
     <br />
     <a href="#about-the-project"><strong>Explore the docs»</strong></a>
     <br />
@@ -279,7 +280,10 @@ Desired Metric
 
 ## Contact US
 <p align="center">
-  <img src="images/miles_image.png" width="300" height="300">
+  <img src="images/miles_image.png" width="300" height="300">   <p>
+    Two case examples of Phenological imagery analysis with R and Google Earth Engine
+  I'm a GIS analyst with a mind for creative innovation and implementation. My interests lie is Urban applications of GIS, with interests in programmatic GIS and leveraging open source GIS technologies for smarter urban planning.   As I head into the final year of my Masters in GIS at Clark University i’m working for Clark Labs as a Remote Sensing Research Assistant as part of the Half-Earth project with ESRI with the goal of modeling land change for each country in the world for the year 2050.
+</p>
   <br />
   <a href="mailto::mvandenburg@clarku.edu ">Contact Miles</a>
   <br />
