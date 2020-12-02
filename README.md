@@ -77,7 +77,7 @@
 
 ## About the Project 
 
-Last year, GEO and Google Earth Engine announced a call to action for Earth observations projects monitoring the pulse of the planet to apply for the GEO-GEE Programme. More than 50 projects were submitted from around the globe on a range of social and environmental topics including climate monitoring, water and coastal observations, sustainable development and other key areas related to environmental protection and conservation. 
+Last year Group on Earth Observations (GEO) and Google Earth Engine announced a call to action for Earth observations projects monitoring the pulse of the planet to apply for the GEO-GEE Programme. More than 50 projects were submitted from around the globe on a range of social and environmental topics including climate monitoring, water and coastal observations, sustainable development and other key areas related to environmental protection and conservation. 
 
 As one of the teams with a winning proposal, we begin a two-year journey to produce tangible societal benefits using the power of Earth observations coupled to Google Earth Engine. In partnership with EO Data Science, we are receiving in-kind technical support, mentoring and ongoing capacity development to ensure projects achieve their intended impact.  
 
