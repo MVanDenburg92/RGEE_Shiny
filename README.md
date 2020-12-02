@@ -283,10 +283,15 @@ I'm a GIS analyst with a mind for creative innovation and implementation. My int
 </p>
   <br />
   <br />
-  <img src="images/shreener.png" width="300" height="300">
-  <br />
-  <a href="mailto:: spyakurel@clarku.edu ">Contact Shreena</a>
+  <img src="images/shreener.png" width="300" height="300"> <p align = "right">
+I am currently a second-year Master's student in the Geographic Information Science program at Clark University with a concentration in remote sensing. My interests include applying GIS and Remote Sensing to understand impacts of climate change and how it’s affecting our lives everyday. I am particularly interested in discovering how anthropogenic activity has modified our landscape and the implication it has on our community through using GIS as a tool. 
+   <a href="mailto::spyakurel@clarku.edu ">Contact Shreena</a>
 </p>
+</p>
+
+
+
+
 
 ## Sources
 
