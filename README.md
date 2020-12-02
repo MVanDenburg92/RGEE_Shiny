@@ -279,7 +279,7 @@ Desired Metric
 
 ## Contact
 
-<img src="images/miles_image.png" width="400" height="400">                    <img src="images/shreener.png" width="400" height="400">
+<img src="images/miles_image.png" width="400" height="400">           .         <img src="images/shreener.png" width="400" height="400">
                 mvandenburg@clarku.edu                                                             spyakurel@clarku.edu
 
 ## Sources
