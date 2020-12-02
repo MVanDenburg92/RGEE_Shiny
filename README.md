@@ -281,7 +281,7 @@ Desired Metric
 
 <img src="images/miles_image.png" width="400" height="400">           .         <img src="images/shreener.png" width="400" height="400">
                 
-               Email: mvandenburg@clarku.edu                                                            Email: spyakurel@clarku.edu
+               Email: mvandenburg@clarku.edu                                                     Email: spyakurel@clarku.edu
 
 ## Sources
 
