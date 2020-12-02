@@ -64,16 +64,16 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#required-packages">Prerequisites</a></li>
+        <li><a href="#required-packages">Required Packages</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#future-work">Future Work</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#acknowledgements">Sources</a></li>
   </ol>
 </details>
 
@@ -276,6 +276,12 @@ Google Earth Engine App that allows the user to select an input region and extra
 Imagery Collection
 Dates
 Desired Metric
+
+## Contact
+
+![Miles Van Denburg](images/miles_image.png ) ![Shreena Pyakurel](images/shreener.png )
+mvandenburg@clarku.edu                          spyakurel@clarku.edu
+
 
 
 ## Sources
