@@ -40,8 +40,8 @@
     <a href="#about-the-project"><strong>Explore the docs»</strong></a>
     <br />
     <br />
-    <a href="hhttps://github.com/MVanDenburg92/RGEE_Shiny">View Demo</a>
-    ·
+    <a href="https://github.com/MVanDenburg92/RGEE_Shiny">View Demo</a>
+    .
     <a href="https://github.com/MVanDenburg92/RGEE_Shiny/issues">Report Bug</a>
     ·
     <a href="https://github.com/MVanDenburg92/RGEE_Shiny/issues">Request Feature</a>
