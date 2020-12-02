@@ -33,8 +33,10 @@
   </a>
 
   <h1 align="center">Phenology Analyses with GEE and R</h1>
-    Two case examples of Phenological imagery analysis with R and Google Earth Engine
-    <p align = "center>
+  
+   Two case examples of Phenological imagery analysis with R and Google Earth Engine
+    
+   <p align = "center>
     <br />
     <a href="#about-the-project"><strong>Explore the docs»</strong></a>
     <br />
