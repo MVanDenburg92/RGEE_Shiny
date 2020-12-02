@@ -277,13 +277,13 @@ Desired Metric
 
 ## Contact US
 <p align="center">
-  <img src="images/miles_image.png" width="300" height="300">   <p align = "right">
+  <img src="images/miles_image.png" width="300" height="300">   <p align = "center">
 I'm a GIS analyst with a mind for creative innovation and implementation. My interests lie is Urban applications of GIS, with interests in programmatic GIS and leveraging open source GIS technologies for smarter urban planning.   As I head into the final year of my Masters in GIS at Clark University i’m working for Clark Labs as a Remote Sensing Research Assistant as part of the Half-Earth project with ESRI with the goal of modeling land change for each country in the world for the year 2050.
     <a href="mailto::mvandenburg@clarku.edu ">Contact Miles</a>
 </p>
   <br />
   <br />
-  <img src="images/shreener.png" width="300" height="300"> <p align = "right">
+  <img src="images/shreener.png" width="300" height="300"> <p align = "center">
 I am currently a second-year Master's student in the Geographic Information Science program at Clark University with a concentration in remote sensing. My interests include applying GIS and Remote Sensing to understand impacts of climate change and how it’s affecting our lives everyday. I am particularly interested in discovering how anthropogenic activity has modified our landscape and the implication it has on our community through using GIS as a tool. 
    <a href="mailto::spyakurel@clarku.edu ">Contact Shreena</a>
 </p>
