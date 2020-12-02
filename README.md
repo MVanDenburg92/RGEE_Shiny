@@ -24,7 +24,6 @@
 [![LinkedIn2][linkedin-shield2]][linkedin-url2]
 
 
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -33,10 +32,9 @@
   </a>
 
   <h1 align="center">Phenology Analyses with GEE and R</h1>
-  
+
+  <p align="center">
    Two case examples of Phenological imagery analysis with R and Google Earth Engine
-    
-   <p align = "center>
     <br />
     <a href="#about-the-project"><strong>Explore the docs»</strong></a>
     <br />
@@ -48,7 +46,6 @@
     <a href="https://github.com/MVanDenburg92/RGEE_Shiny/issues">Request Feature</a>
   </p>
 </p>
-
 
 
 <!-- TABLE OF CONTENTS -->
