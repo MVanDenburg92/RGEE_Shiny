@@ -282,6 +282,7 @@ Desired Metric
 ![Miles Van Denburg](images/miles_image.png&s=200) ![Shreena Pyakurel](images/shreener.png){:height="200px" width="200px"}
 mvandenburg@clarku.edu                          spyakurel@clarku.edu
 
+<img src="images/miles_image.png" width="100" height="100">
 ## Sources
 
 #### RGEE
