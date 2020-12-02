@@ -37,7 +37,7 @@
   <p align="center">
     Two case examples of Phenological imagery analysis with R and Google Earth Engine
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="#about"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="hhttps://github.com/MVanDenburg92/RGEE_Shiny">View Demo</a>
