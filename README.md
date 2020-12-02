@@ -279,10 +279,8 @@ Desired Metric
 
 ## Contact
 
-![Miles Van Denburg](images/miles_image.png ) ![Shreena Pyakurel](images/shreener.png )
+![Miles Van Denburg](images/miles_image.png =250x250) ![Shreena Pyakurel](images/shreener.png =250x250)
 mvandenburg@clarku.edu                          spyakurel@clarku.edu
-
-
 
 ## Sources
 
