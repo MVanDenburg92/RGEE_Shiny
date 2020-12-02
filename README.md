@@ -141,7 +141,7 @@ using("shiny","ggplot2","sf","sp", "tidyverse", "raster", "qdapRegex", "lubridat
   
 ### RGEE
 
-#Insert Image Here
+![RGEE](RGEE.PNG)
 
 #### What is Google Earth Engine?
 
@@ -230,7 +230,7 @@ ee_clean_pyenv() # Remove reticulate system variables
 
 ### GreenBrown
 
-#Insert Image Here
+![Greenbrown](greenbrown.PNG)
 ```r
 #Install greenbrown
 install.packages("greenbrown", repos="http://R-Forge.R-project.org")
