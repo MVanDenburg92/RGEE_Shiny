@@ -32,7 +32,7 @@
     <img src="RGEE_Logo.PNG" alt="Logo" width="300" height="300">
   </a>
 
-  <h1 align="center">Phenology with GEE and R</h1>
+  <h1 align="center">Phenology Analyses with GEE and R</h1>
 
   <p align="center">
     Two case examples of Phenological imagery analysis with R and Google Earth Engine
