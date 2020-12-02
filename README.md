@@ -80,9 +80,9 @@
 
 Last year, GEO and Google Earth Engine announced a call to action for Earth observations projects monitoring the pulse of the planet to apply for the GEO-GEE Programme. More than 50 projects were submitted from around the globe on a range of social and environmental topics including climate monitoring, water and coastal observations, sustainable development and other key areas related to environmental protection and conservation. 
 
-The winning proposals begin a two-year journey to produce tangible societal benefits using the power of Earth observations coupled to Google Earth Engine. In partnership with EO Data Science, the winners are receiving in-kind technical support, mentoring and ongoing capacity development to ensure projects achieve their intended impact.
+As one of the teams with a winning proposal, we begin a two-year journey to produce tangible societal benefits using the power of Earth observations coupled to Google Earth Engine. In partnership with EO Data Science, we are receiving in-kind technical support, mentoring and ongoing capacity development to ensure projects achieve their intended impact.  
 
-## Objective
+### Objective
 - Phenology is described as the study of timing of different event such as flowering, leafing, and migrations
 - The goal of our project is to develop essential biodiversity variables using Google Earth Engine to extract and analyze phenological metrics to explore trends over  time using two key packages `RGEE` and `GreenBrown`. 
 - The metrics we are extracting follows
