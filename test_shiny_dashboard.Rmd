@@ -41,14 +41,9 @@ Yt_interpolate_daily2 <- list()
 Phen_2000_2007 <- list()
 
 
-#Apply Tspp # time series pre-processing ---interpolating across whole data set.  Use lapply to retain time series information.
-# ww <- ncol(EVIseries)
-# Yt_interpolate_daily2 <- lapply(seq(ww), function(x){
-#   Yt_interpolate_daily[[x]]  <- TsPP(EVIseries[,x], fpg = FillPermanentGaps, tsgf=TSGFspline)
-# })
 
 ###############################################
-library(doParallel)  #Foreach Parallel Adaptor
+library(doParallel)  #Foreach Parallel Adaptor parallel processing to extrsct metrics 
 library(foreach)
 library(parallel)
 
@@ -78,16 +73,18 @@ system.time({
 
 
 ##########################################################
-
+#interpolation graph 
 plot(Yt_interpolate_daily2[[1]] )
 
+#years to be added to data frame  
 years <- c(2000:2007)
 years <- as.numeric(years)
 
+#Phenology regression plot 
 plot(Phen_2000_2007[[1]])
 
 
-
+#extract metrics of choice 
 sos <- list()
 eos <- list()
 los <- list()
@@ -103,13 +100,14 @@ eos <- unlist(eos)
 los <- unlist(los)
 pop <- unlist(pop)
 
+#create dataframe of metrics 
 coords <-worc_EVI %>% select(x, y)
 coords2 <- coords %>% slice(rep(1:n(), each = 8))
 DF_phenmet_test <- data.frame(coords2,sos, eos, los, pop) %>% cbind(years)
 DF_phenmet_testarranged <- DF_phenmet_test %>% arrange(years)
 DF_phenmet_testarranged_sf = st_as_sf(DF_phenmet_testarranged, coords = c("x", "y"), crs = 4326)
 
-
+#raster brick of metrics 
 e <- extent(worc_EVI[,(1:2)])
 r <- raster(e, ncol = 16, nrow = 18, crs= '+proj=longlat +datum=WGS84')
 raster_brick <- do.call(stack, lapply(unique(DF_phenmet_testarranged$years), function(yr){
@@ -145,13 +143,13 @@ sidebar <- dashboardSidebar(
            selectInput("end_date", "End Date:", years)))
 body <- dashboardBody(
   fluidRow(
-     box(div(style='width:500px;overflow-x: scroll; height:500px;overflow-y: scroll;',
-            leafletOutput("mymap"), height = 500, width = 2000)),
-     box(div(style='width:500px;overflow-x: scroll; height:500px;overflow-y: scroll;',
+     box(div(style='width:750px;overflow-x: scroll; height:500px;overflow-y: scroll;',
+            leafletOutput("mymap"), height = 500, width = 500)),
+     box(div(style='width:750px;overflow-x: scroll; height:500px;overflow-y: scroll;',
             plotOutput("pt", height = 500, width = 500))), 
-     box(div(style='width:500px;overflow-x: scroll; height:500px;overflow-y: scroll;',
+     box(div(style='width:750px;overflow-x: scroll; height:500px;overflow-y: scroll;',
             plotOutput("interpolated", height = 500, width = 500))), 
-    box(div(style='width:500px;overflow-x: scroll; height:500px;overflow-y: scroll;',
+    box(div(style='width:750px;overflow-x: scroll; height:500px;overflow-y: scroll;',
             plotOutput("regression", height = 500, width = 500)))))
   
    
@@ -189,7 +187,9 @@ server <- function(input, output) {
   plot(Yt_interpolate_daily2[[1]], ylab = "Daily Interpolated Value")
   })
   
-  pal <- colorNumeric(c("#0C2C84", "#41B6C4", "#FFFFCC"), values(evi_years),
+  pal <- colorNumeric(c('#FFFFFF', '#CE7E45', '#DF923D', '#F1B555', '#FCD163', '#99B718', '#74A901',
+    '#66A000', '#529400', '#3E8601', '#207401', '#056201', '#004C00', '#023B01',
+    '#012E01', '#011D01', '#011301'), values(evi_years),
   na.color = "transparent")
   output$mymap <- renderLeaflet({
     leaflet() %>%
